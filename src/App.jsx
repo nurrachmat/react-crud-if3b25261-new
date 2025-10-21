@@ -5,6 +5,7 @@ const Home = React.lazy( ()=> import('./components/Home') )
 const FakultasList = React.lazy( ()=> import('./components/Fakultas/List') )
 const ProdiList = React.lazy( ()=> import('./components/Prodi/List') )
 const FakultasCreate = React.lazy(() => import("./components/Fakultas/Create"));
+const FakultasEdit = React.lazy(() => import("./components/Fakultas/Edit"));
 
 function App() { 
   
@@ -40,6 +41,7 @@ function App() {
           <Route path="/fakultas" element={<FakultasList />} />
           <Route path="/prodi" element={<ProdiList />} />
           <Route path="/fakultas/create" element={<FakultasCreate />} />
+          <Route path="/fakultas/edit/:id" element={<FakultasEdit />} />
         </Routes>
       </Suspense>
       </div>
